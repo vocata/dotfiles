@@ -1,5 +1,3 @@
 -- core
-require("core.options")
-require("core.autocommands")
-require("core.keybindings")
-require("core.colorscheme")
+require("core.builtin.init")
+require("core.dap.init")
