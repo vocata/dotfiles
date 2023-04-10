@@ -36,6 +36,6 @@ git clone https://github.com/jeffreytse/zsh-vi-mode \
 
 ```bash
 # zsh-git-url
-git clone https://github.com/xueyuelei/zsh-git-url \
+git clone https://github.com/vocata/zsh-git-url \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-git-url
 ```
