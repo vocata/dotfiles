@@ -1,7 +1,7 @@
 table.insert(lvim.plugins,
   {
     "ethanholz/nvim-lastplace",
-    event = "BufRead",
+    event = "BufReadPre",
     config = function()
       require("nvim-lastplace").setup({
         lastplace_ignore_buftype = { "quickfix", "nofile", "help" },

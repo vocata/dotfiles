@@ -1,4 +1,4 @@
-# Setup for LunarVim
+# Setup for LunarVim(Nightly)
 
 # How to Use
 
@@ -13,6 +13,3 @@
 ```bash
 ln -s $HOME/.config/dotfiles/lvim $HOME/.config/lvim
 ```
-
-3. Install plugins using *Packer*, enter lvim and execute **:PackerInstall**
-

@@ -3,7 +3,7 @@ table.insert(lvim.plugins,
     "iamcco/markdown-preview.nvim",
     event = "BufRead",
     ft = "markdown",
-    run = function()
+    build = function()
       vim.fn["mkdp#util#install"]()
     end,
     config = function()

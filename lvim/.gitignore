@@ -1,1 +1,8 @@
+# lazy
+lazy-lock.json
+
+# packer
 packer_compiled.lua
+
+# lua-language-server
+.luarc.json
