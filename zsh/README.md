@@ -1,6 +1,6 @@
 # Setup for Zsh
 
-# How to Use
+## How to Use
 
 1. Backup your zshrc
 
@@ -11,7 +11,7 @@
 2. Create a soft link to your **$HOME**
 
 ```bash
-ln -s $HOME/.config/dotfiles/zsh/zshrc $HOME/.zshrc
+ln -s $HOME/.config/dotfiles/zsh/zshrc.basic $HOME/.zshrc
 ```
 
 3. Install common used plugins

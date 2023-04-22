@@ -1,0 +1,140 @@
+" Specify the character encoding used in the script.
+set fileencodings=utf-8,gbk
+set encoding=utf-8
+scriptencoding utf-8
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has('autocmd')
+    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" Plugins will be downloaded under the specified directory
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins
+" for example: Plug 'your plugins'
+
+" Plug 'tpope/vim-sensible'
+Plug 'yianwillis/vimcdoc'
+Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-repeat'
+Plug 'junegunn/vim-easy-align'
+Plug 'easymotion/vim-easymotion'
+Plug 'Raimondi/delimitMate'
+
+" Theme
+Plug 'sheerun/vim-polyglot' " 多语言高亮包
+Plug 'sainnhe/sonokai'      " sonokai配色
+
+" List ends here. Plugins become visible to Vim after this call
+call plug#end()
+
+" available system plugin
+runtime ftplugin/man.vim "较好地显示手册页的系统自带的插件
+
+" -----basic configurations-----
+" function definition
+function! SetColorscheme()
+    " important!!
+    if has('termguicolors')
+        set termguicolors " 24位色
+    endif
+    set background=dark
+
+    let g:sonokai_style='atlantis' " default/atlantis/andromeda/shusia/maia/espresso
+    let g:sonokai_better_performance=1
+    colorscheme sonokai
+endfunction
+
+function! SetDefaultOptions()
+    if has('mouse')
+        set mouse=a
+    endif
+    set number
+    set incsearch
+    set hlsearch
+    set wildmenu
+    " set cursorcolumn
+    set cursorline
+    set signcolumn=yes
+    set updatetime=1200 " YCM依赖该选项，延迟1200毫秒弹出补全
+    if v:version >= 900
+        set wildoptions=fuzzy,pum
+    endif
+endfunction
+
+function! SetIndentOptions()
+    set backspace=2   " 使用delimitMate括号展开必须选项
+    set expandtab     " 插入时用空格替换tab字符
+    set smarttab      " 默认使用智能缩进
+    set noshowmode    " 不展示当前vim处于哪种模式，状态栏中已有这个信息
+    set tabstop=2     " 输入tab时表示的空格数
+    set shiftwidth=2  " 自动缩进时使用的空白数目，例如>>操作。设置为0时，使用tabstop的值
+    set softtabstop=2 " 用于文本展示，例如tabstop=8，如果设置softtabstop=4，展示的tab也是4个空格的宽度
+endfunction
+
+function! SetFoldOptions()
+    set foldenable
+    set foldmethod=indent
+    set foldlevelstart=99
+endfunction
+
+function! SetSpellcheckOptions()
+    set spell
+    set spelllang=en
+endfunction
+
+call SetColorscheme()
+call SetDefaultOptions()
+call SetIndentOptions()
+" call SetSpellcheckOptions()
+call SetFoldOptions()
+
+" map
+let mapleader = " " " set default leader key as space
+
+nmap <silent><leader>h :nohls<CR>
+nmap <silent><c-h> :wincmd h<CR>
+nmap <silent><c-j> :wincmd j<CR>
+nmap <silent><c-k> :wincmd k<CR>
+nmap <silent><c-l> :wincmd l<CR>
+
+" presetting autocmd groups
+augroup filetype_settings
+    autocmd BufRead,BufNewFile *.asm,*.s,*.S set filetype=asm
+    autocmd FileType * set formatoptions-=cro " 关闭自动注释
+augroup end
+
+
+" -----plug settings-----
+
+" vim-commentary
+augroup commentary_settings
+    autocmd FileType c,cpp set commentstring=//\ %s " 设置注释符号
+    autocmd FileType asm set commentstring=;\ %s    " 设置注释符号
+augroup end
+
+" delimitMate
+augroup delimit_settings
+    autocmd FileType vim let b:delimitMate_quotes = "' `" " vim的注释是双引号
+augroup end
+let g:delimitMate_expand_cr=1
+
+" vim-easy-align
+xmap ga <plug>(EasyAlign)
+nmap ga <plug>(EasyAlign)
+
+" " -----tips-----
+" " Put these lines at the very end of your vimrc file.
+
+" " Load all plugins now.
+" " Plugins need to be added to runtimepath before helptags can be generated.
+" packloadall
+" " Load all of the helptags now, after plugins have been loaded.
+" " All messages and errors will be ignored.
+
+" silent! helptags ALL

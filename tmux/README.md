@@ -1,6 +1,6 @@
 # TMux Configuration
 
-# How to Use
+## How to Use
 
 1. Backup existing configuration
 

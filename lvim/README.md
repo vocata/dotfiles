@@ -1,6 +1,6 @@
 # Setup for LunarVim(Nightly)
 
-# How to Use
+## How to Use
 
 1. Backup existing lunarvim configuration
 
