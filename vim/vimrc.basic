@@ -51,9 +51,7 @@ function! SetColorscheme()
 endfunction
 
 function! SetDefaultOptions()
-    if has('mouse')
-        set mouse=a
-    endif
+    " set mouse=a
     set number
     set incsearch
     set hlsearch
