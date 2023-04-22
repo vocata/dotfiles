@@ -119,9 +119,9 @@ command_exists() {
 }
 
 command_exists lvim && {
-  alias vi=lvim
   alias vim=lvim
 }
+
 command_exists lazygit && {
   alias lg=lazygit
 }
