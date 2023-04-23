@@ -56,10 +56,12 @@ function! SetDefaultOptions()
     set incsearch
     set hlsearch
     set wildmenu
+    set smartcase
+    set showmode
     " set cursorcolumn
     set cursorline
     set signcolumn=yes
-    set updatetime=1200 " YCM依赖该选项，延迟1200毫秒弹出补全
+    set history=1000
     if v:version >= 900
         set wildoptions=fuzzy,pum
     endif
@@ -96,6 +98,7 @@ call SetFoldOptions()
 let mapleader = " " " set default leader key as space
 
 nmap <silent><leader>h :nohls<CR>
+nmap <silent><leader>c :q<CR>
 nmap <silent><c-h> :wincmd h<CR>
 nmap <silent><c-j> :wincmd j<CR>
 nmap <silent><c-k> :wincmd k<CR>
