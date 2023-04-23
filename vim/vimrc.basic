@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
 " Declare the list of plugins
 " for example: Plug 'your plugins'
 
-" Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'
 Plug 'yianwillis/vimcdoc'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-commentary'
@@ -97,12 +97,15 @@ call SetFoldOptions()
 " map
 let mapleader = " " " set default leader key as space
 
-nmap <silent><leader>h :nohls<CR>
-nmap <silent><leader>c :q<CR>
-nmap <silent><c-h> :wincmd h<CR>
-nmap <silent><c-j> :wincmd j<CR>
-nmap <silent><c-k> :wincmd k<CR>
-nmap <silent><c-l> :wincmd l<CR>
+nmap <leader>/ gcc
+nmap <leader>h :nohls<CR>
+nmap <leader>c :q<CR>
+nmap <leader>bn :bn<CR>
+nmap <leader>bb :bN<CR>
+nmap <c-h> <c-w>h
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
 
 " presetting autocmd groups
 augroup filetype_settings
