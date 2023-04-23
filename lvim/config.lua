@@ -2,7 +2,6 @@
  THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
  `lvim` is the global options object
 ]]
-
 -- custom configuration
 require("core.init")
 require("plugin.init")
@@ -11,7 +10,7 @@ require("plugin.init")
 lvim.log.level = "info"
 lvim.format_on_save = {
   enabled = true,
-  pattern = "*.lua",
+  pattern = "*",
   timeout = 1000,
 }
 -- to disable icons and use a minimalist setup, uncomment the following
