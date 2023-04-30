@@ -25,6 +25,7 @@ Plug 'tpope/vim-repeat'
 Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
 Plug 'Raimondi/delimitMate'
+Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Theme
 Plug 'sheerun/vim-polyglot' " 多语言高亮包
@@ -97,7 +98,6 @@ call SetFoldOptions()
 " map
 let mapleader = " " " set default leader key as space
 
-nmap <leader>/ gcc
 nmap <leader>h :nohls<CR>
 nmap <leader>c :q<CR>
 nmap <leader>bn :bn<CR>
@@ -117,6 +117,7 @@ augroup end
 " -----plug settings-----
 
 " vim-commentary
+nmap <leader>/ gcc
 augroup commentary_settings
     autocmd FileType c,cpp set commentstring=//\ %s " 设置注释符号
     autocmd FileType asm set commentstring=;\ %s    " 设置注释符号
@@ -131,6 +132,10 @@ let g:delimitMate_expand_cr=1
 " vim-easy-align
 xmap ga <plug>(EasyAlign)
 nmap ga <plug>(EasyAlign)
+
+" markdown-preview.nvim
+nmap <leader>m <plug>MarkdownPreviewToggle
+
 
 " " -----tips-----
 " " Put these lines at the very end of your vimrc file.
