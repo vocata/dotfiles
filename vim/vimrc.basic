@@ -25,6 +25,7 @@ Plug 'tpope/vim-repeat'
 Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
 Plug 'Raimondi/delimitMate'
+Plug 'preservim/nerdtree'
 Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Theme
@@ -137,6 +138,8 @@ nmap ga <plug>(EasyAlign)
 " markdown-preview.nvim
 nmap <leader>m <plug>MarkdownPreviewToggle
 
+" nerdtree
+nmap <leader>e :NERDTreeToggle<CR>
 
 " " -----tips-----
 " " Put these lines at the very end of your vimrc file.
