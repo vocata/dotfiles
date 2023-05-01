@@ -54,6 +54,7 @@ endfunction
 function! SetDefaultOptions()
     " set mouse=a
     set number
+    set relativenumber
     set incsearch
     set hlsearch
     set wildmenu
