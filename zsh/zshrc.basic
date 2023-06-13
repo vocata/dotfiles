@@ -118,11 +118,18 @@ command_exists() {
     command -v "$@" > /dev/null 2>&1
 }
 
+command_exists vim && {
+  alias vi=vim
+}
+
 command_exists lvim && {
-  alias vim=lvim
+  alias lvi=lvim
 }
 
 command_exists lazygit && {
   alias lg=lazygit
 }
 
+command_exists lazydocker && {
+  alias ldk=lazydocker
+}
