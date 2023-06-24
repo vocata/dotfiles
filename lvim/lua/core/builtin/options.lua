@@ -10,4 +10,5 @@ vim.opt.relativenumber = true
 vim.opt.foldenable = true
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevelstart = 99
+vim.opt.wrap = false
 vim.opt.clipboard = "" -- do not use system clipboard
