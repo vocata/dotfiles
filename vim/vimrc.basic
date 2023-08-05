@@ -60,6 +60,7 @@ function! SetDefaultOptions()
     set hlsearch
     set wildmenu
     set smartcase
+    set wrap
     set showmode
     " set cursorcolumn
     set cursorline
