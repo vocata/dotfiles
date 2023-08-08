@@ -1,7 +1,7 @@
 table.insert(lvim.plugins,
   {
     "karb94/neoscroll.nvim",
-    event = "BufReadPre",
+    event = "BufRead",
     config = function()
       require('neoscroll').setup({
         -- All these keys will be mapped to their corresponding default scrolling animation
