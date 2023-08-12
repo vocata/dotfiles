@@ -74,17 +74,17 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    z
-    git
-    sudo
-    extract
-    kubectl
-    gitignore
-    zsh-vi-mode
-    zsh-git-url
-    colored-man-pages
-    zsh-autosuggestions
-    zsh-syntax-highlighting
+  z
+  git
+  sudo
+  extract
+  kubectl
+  gitignore
+  zsh-vi-mode
+  zsh-git-url
+  colored-man-pages
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,7 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 command_exists() {
-    command -v "$@" > /dev/null 2>&1
+  command -v "$@" > /dev/null 2>&1
 }
 
 command_exists vim && {
