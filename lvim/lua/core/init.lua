@@ -1,3 +1,3 @@
 -- core
-require("core.builtin.init")
-require("core.dap.init")
+require("core.builtin")
+require("core.dap")

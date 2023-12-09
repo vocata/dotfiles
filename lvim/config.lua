@@ -3,8 +3,8 @@
  `lvim` is the global options object
 ]]
 -- custom configuration
-require("core.init")
-require("plugin.init")
+require("core")
+require("plugin")
 
 -- general
 lvim.log.level = "info"
