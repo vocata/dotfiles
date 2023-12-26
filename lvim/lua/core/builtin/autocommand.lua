@@ -14,5 +14,14 @@ lvim.autocommands = {
         vim.opt.filetype = "sql"
       end
     }
+  },
+  {
+    "BufEnter",
+    {
+      pattern = { "*.thrift" },
+      callback = function()
+        vim.opt.commentstring = "// %s"
+      end
+    }
   }
 }
