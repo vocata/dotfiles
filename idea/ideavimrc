@@ -1,0 +1,20 @@
+if filereadable("~/.vimrc")
+  source ~/.vimrc
+endif
+
+" search
+nmap <leader>f :action SearchEverywhere<CR>
+nmap <leader>sr :action RecentFiles<CR>
+
+" goto
+nmap gd :action GotoDeclaration<CR>
+nmap gi :action GotoImplementation<CR>
+nmap gI :action GotoSuperMethod<CR>
+nmap gr :action ShowUsages<CR>
+
+" terminal
+nmap <Leader>tt :action Terminal.OpenInTerminal<CR>
+
+" debug
+nmap <Leader>dt :action ToggleLineBreakpoint<CR>
+nmap <Leader>ds :action ChooseDebugConfiguration<CR>
