@@ -7,7 +7,7 @@
 1. Clone this repository to **$HOME/.config**
 
 ```bash
-git clone https://github.com/vocata/dotfiles.git $HOME/.config/dotfiles
+git clone git@github.com:vocata/dotfiles.git $HOME/.config/dotfiles
 ```
 
 2. View detailed setup steps located in each module.

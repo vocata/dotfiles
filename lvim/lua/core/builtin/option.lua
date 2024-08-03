@@ -1,6 +1,7 @@
 -- GUI options
 if vim.g.neovide then
-  vim.o.guifont = "CaskaydiaCove Nerd Font:h14"
+  vim.o.guifont = "Cascadia Code NF:h14"
+  vim.g.neovide_cursor_vfx_mode = "sonicboom"
 end
 
 -- general options
