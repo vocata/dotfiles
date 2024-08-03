@@ -1,6 +1,4 @@
-if filereadable("~/.vimrc")
-  source ~/.vimrc
-endif
+source ~/.vimrc
 
 " search
 nmap <leader>f :action SearchEverywhere<CR>
