@@ -8,7 +8,7 @@
 [ -e $HOME/.tmux.conf ] && mv $HOME/.tmux.conf $HOME/.tmux.conf.old
 ```
 
-2. Create a soft link to your **$HOME**
+2. Create a soft link to your **$HOME** dir
 
 ```bash
 ln -s $HOME/.config/dotfiles/tmux/tmux.conf $HOME/.tmux.conf

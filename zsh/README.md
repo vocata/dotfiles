@@ -8,7 +8,7 @@
 [ -e $HOME/.zshrc ] && mv $HOME/.zshrc $HOME/.zshrc.old
 ```
 
-2. Create a soft link to your **$HOME**
+2. Create a soft link to your **$HOME** dir
 
 ```bash
 ln -s $HOME/.config/dotfiles/zsh/zshrc.basic $HOME/.zshrc

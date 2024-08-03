@@ -17,7 +17,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 [ -e $HOME/.vimrc ] && mv $HOME/.vimrc $HOME/.vimrc.old
 ```
 
-3. Create a soft link to your **$HOME**
+3. Create a soft link to your **$HOME** dir
 
 ```bash
 ln -s $HOME/.config/dotfiles/vim/vimrc.basic $HOME/.vimrc

@@ -8,7 +8,7 @@
 [ -e $HOME/.config/lvim ] && mv $HOME/.config/lvim $HOME/.config/lvim.old
 ```
 
-2. Create a soft link to **$HOME/.config**
+2. Create a soft link to **$HOME/.config** dir
 
 ```bash
 ln -s $HOME/.config/dotfiles/lvim $HOME/.config/lvim
