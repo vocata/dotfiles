@@ -1,0 +1,33 @@
+# Enable starship
+eval "$(starship init zsh)"
+
+# Enable fzf
+source <(fzf --zsh)
+
+# Enable auto jump
+eval "$(zoxide init zsh)"
+
+# Load zsh plugins
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Enable completion
+zstyle ':completion:*' menu select
+autoload -Uz compinit && compinit
+
+# Enables prefix-based history search
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey '^[[A' history-beginning-search-backward-end
+bindkey '^[[B' history-beginning-search-forward-end
+
+# Common ls aliases
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+alias ls='ls -G'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -lah'
+alias lt='ls -lahT'
