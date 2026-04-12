@@ -27,7 +27,7 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 alias ls='ls -G'
-alias l='ls -CF'
+alias l='ls -lh'
 alias la='ls -A'
 alias ll='ls -lah'
 alias lt='ls -lahT'
